@@ -38,4 +38,8 @@ jobs:
             - name : Echo infos
               run: |
                echo "hello world"
-               echo ${{ inputs.inputString}}
+               echo ${{ inputs.stringInput}}
+               echo ${{ inputs.numberInput}}
+               echo ${{ inputs.boolInput}}
+               echo ${{ inputs.optionInput}}
+               echo ${{ inputs.environmentInput}}
