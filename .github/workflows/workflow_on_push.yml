@@ -1,24 +1,22 @@
 name: Workflow Run
+
 on:
-    workflow_run:
-        workflows: [Push Request]
-        types: [completed]
+  workflow_run:
+    workflows: [Push Request]
+    types: [completed]
 
 jobs:
-    workflow_run_ci:
-        name: Workflow Run Ci
-        runs-on: ubuntu-latest
-        steps:
-            - name: Echo Hello world
-              run: |
-               echo "Hello World"
-            - name: Print Github details
-              run: |
-               echo  "sha" = $GITHUB_SHA
-               echo  "ref" = ${{github.ref}}
-               
-            - run: echo "i was ran because "Push Request Ci" was completed"
-               
+  workflow_run_ci:
+    name: Workflow Run Ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello world
+        run: echo "Hello World"
 
+      - name: Print Github details
+        run: |
+          echo "sha = $GITHUB_SHA"
+          echo "ref = ${{ github.ref }}"
 
-             
+      - name: Run if "Push Request Ci" was completed
+        run: echo "I was run because 'Push Request Ci' was completed"
