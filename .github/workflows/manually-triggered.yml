@@ -3,11 +3,24 @@ name: Manually Triggered
 on:
   workflow_dispatch:
     inputs:
-      string:
+      inputString:
           description: "string input"
           type: string
           required: true
           default: "Default Value"
+      inputNumber:
+        description: "number input"
+        type: number
+        required: true
+        default: 4
+      optionInput:
+        description: "options input "
+        type: choice
+        default: "Option 2"
+        options:
+          - Option 1
+          - Option 2
+          - Option 3
 
 jobs:
     log-info:
@@ -16,3 +29,4 @@ jobs:
             - name : Echo infos
               run: |
                echo "hello world"
+               echo ${{ inputs.inputString}}
