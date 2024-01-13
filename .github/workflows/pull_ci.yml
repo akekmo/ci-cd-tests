@@ -13,6 +13,6 @@ jobs:
             - name: Print Github details
               run: |
                echo  "sha" = $GITHUB_SHA
-               echo  "ref" = $GITHUB_REF_NAME
+               echo  "ref" = $GITHUB_REF
 
              
