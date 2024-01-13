@@ -3,12 +3,12 @@ name: Manually Triggered
 on:
   workflow_dispatch:
     inputs:
-      inputString:
+      stringInput:
           description: "string input"
           type: string
           required: true
           default: "Default Value"
-      inputNumber:
+      numberInput:
         description: "number input"
         type: number
         required: true
@@ -21,6 +21,15 @@ on:
           - Option 1
           - Option 2
           - Option 3
+      boolInput:
+        description: "Boolean input"
+        type: boolean
+        required: false
+      environmentInput:
+        description: "environment input"
+        type: environment
+        required: true
+      
 
 jobs:
     log-info:
