@@ -1,11 +1,11 @@
-name: Workflow Run Ci
+name: Workflow Run
 on:
     workflow_run:
         workflows: [Push Request]
         types: [completed]
 
 jobs:
-    pull_request_ci:
+    workflow_run_ci:
         name: Workflow Run Ci
         runs-on: ubuntu-latest
         steps:
