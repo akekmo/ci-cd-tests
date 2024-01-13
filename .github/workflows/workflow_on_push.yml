@@ -1,0 +1,24 @@
+name: Workflow Run Ci
+on:
+    workflow_run:
+        workflows: [Push Request Ci]
+        types: [completed]
+
+jobs:
+    pull_request_ci:
+        name: Workflow Run Ci
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo Hello world
+              run: |
+               echo "Hello World"
+            - name: Print Github details
+              run: |
+               echo  "sha" = $GITHUB_SHA
+               echo  "ref" = ${{github.ref}}
+               
+            - run: echo "i was ran because "Push Request Ci" was completed"
+               
+
+
+             
