@@ -10,7 +10,12 @@ jobs:
             - name: Echo Hello world
               run: |
                echo "Hello World"
-            - name: Print Github sha
-              run: echo $GITHUB_SHA
+            - name: Print Github details
+              run: |
+               echo  "sha" = $GITHUB_SHA
+               echo  "ref" = ${{github.ref}}
+               echo  "pr request id " = ${{github.event.before}}
+               
+
 
              
