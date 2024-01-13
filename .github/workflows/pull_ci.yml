@@ -14,5 +14,8 @@ jobs:
               run: |
                echo  "sha" = $GITHUB_SHA
                echo  "ref" = ${{github.ref}}
+               echo  "pr request id " = ${{github.event.before}}
+               
+
 
              
