@@ -1,4 +1,4 @@
-name: Workflow Run
+name: workflow Run
 
 on:
   workflow_run:
