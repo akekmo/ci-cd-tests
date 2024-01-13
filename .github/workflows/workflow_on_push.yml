@@ -1,7 +1,7 @@
 name: Workflow Run Ci
 on:
     workflow_run:
-        workflows: [Push Request Ci]
+        workflows: [Push Request]
         types: [completed]
 
 jobs:

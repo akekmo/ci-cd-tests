@@ -1,4 +1,4 @@
-name: Push Request Ci
+name: Push Request
 on:
     push:
         branches: [dev]
