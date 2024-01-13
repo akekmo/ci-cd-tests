@@ -1,0 +1,22 @@
+name: Push Request
+on:
+    push:
+        branches: [dev]
+
+jobs:
+    pull_request_ci:
+        name: Push Request Ci
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo Hello world
+              run: |
+               echo "Hello World"
+            - name: Print Github details
+              run: |
+               echo  "sha" = $GITHUB_SHA
+               echo  "ref" = ${{github.ref}}
+               echo  "pr request id " = ${{github.event.before}}
+               
+
+
+             
