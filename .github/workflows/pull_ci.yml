@@ -1,0 +1,16 @@
+name: Pull Request Ci
+on:
+    pull_request
+
+jobs:
+    pull_request_ci:
+        name: Pull Request Ci
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo Hello world
+              run: |
+               echo "Hello World"
+            - name: Print Github sha
+              run: echo $GITHUB_SHA
+
+             
