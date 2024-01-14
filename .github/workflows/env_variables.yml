@@ -1,0 +1,11 @@
+name: env playground
+on:
+    push:
+
+jobs:
+    env_playground:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo MyName
+              run: |
+               echo '${{vars.MY_NAME}}'
