@@ -9,4 +9,4 @@ jobs:
         steps:
             - name: Echo MyName
               run: |
-               echo '${{env.deployment.MY_NAME}}'
+               echo ${{vars.MY_NAME}}
