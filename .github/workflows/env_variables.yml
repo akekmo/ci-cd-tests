@@ -1,9 +1,7 @@
 name: env playground
 on:
     push:
-env:
-    # Setting an environment variable with the value of a configuration variable
-    env_var: ${{ vars.deployments }}
+
 
 jobs:
     env_playground:
@@ -11,4 +9,4 @@ jobs:
         steps:
             - name: Echo MyName
               run: |
-               echo '${{vars.MY_NAME}}'
+               echo '${{env.MY_NAME}}'
