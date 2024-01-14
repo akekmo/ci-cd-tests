@@ -22,7 +22,8 @@ jobs:
             -  uses : actions/setup-node@v4
                with:
                 node-version: ${{matrix.node-version}}
-            - run: |
+            - name: Echo details
+              run: |
                node -v
                echo ${{ tojson(matrix)}}
 
