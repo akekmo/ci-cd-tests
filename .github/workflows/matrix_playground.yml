@@ -16,7 +16,7 @@ jobs:
                     - os: ubuntu-latest
                       experimental: true
                     
-            fail-fast: false
+         
         runs-on: ${{matrix.os}}
         steps:
             -  uses : actions/setup-node@v4
