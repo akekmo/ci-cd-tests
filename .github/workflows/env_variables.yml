@@ -13,7 +13,7 @@ jobs:
             - name: decrypt secret
               run: |
                mkdir $HOME/secrets
-               gpg --decrypt --passphrase=${{secrets.GPG_PASSPHRASE}} --output $HOME/secrets/decryptedsecret.json secrets.json.gpg
+               gpg --quiet --batch --yes --decrypt --passphrase=${{secrets.GPG_PASSPHRASE}} --output $HOME/secrets/decryptedsecret.json secrets.json.gpg
                cat $HOME/secrets/decryptedsecret.json
 
 
