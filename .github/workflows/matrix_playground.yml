@@ -12,7 +12,6 @@ jobs:
                 include:
                     - os: ubuntu-latest
                       node-version: 17
-                      experimental: false
                     - experimental: false
                     - os: ubuntu-latest
                       experimental: true
@@ -24,8 +23,14 @@ jobs:
                with:
                 node-version: ${{matrix.node-version}}
             - name: Echo details
+
               run: |
                node -v
                echo '${{ toJson(matrix)}}'
+            - if: matrix.experimental == true
+              run: echo "experiment is true at os:${{matrix.os}}, node-version:${{matrix.node-version}}"
+               
+              
+                
 
         
