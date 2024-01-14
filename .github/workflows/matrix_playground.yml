@@ -9,12 +9,22 @@ jobs:
             matrix:
                 os : [ubuntu-latest, windows-latest]
                 node-version: [14, 15, 16]
+                include:
+                    - os: ubuntu-latest
+                      node-version: 17
+                    - experimental: false
+                    - os: ubuntu-latest
+                      experimental: true
+                    
+            fail-fast: false
         runs-on: ${{matrix.os}}
         steps:
             - run : node -v
             -  uses : actions/setup-node@v4
                with:
                 node-version: ${{matrix.node-version}}
-            - run:  node -v
+            - run: |
+               node -v
+               echo ${{ tojson(matrix)}}
 
         
