@@ -4,9 +4,13 @@ on:
 
 
 jobs:
+    
     env_playground:
+        environment: "deployment"
         runs-on: ubuntu-latest
         steps:
             - name: Echo MyName
               run: |
+               
+               echo ${{vars.AKEK}}
                echo ${{env.deployment.MY_NAME}}
