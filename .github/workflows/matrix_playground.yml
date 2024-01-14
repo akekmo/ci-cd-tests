@@ -25,5 +25,6 @@ jobs:
             - name: Echo details
               run: |
                node -v
+               echo '${{ toJson(matrix)}}'
 
         
