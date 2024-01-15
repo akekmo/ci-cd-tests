@@ -25,4 +25,4 @@ jobs:
                  const axios = require('axios');
                  res = await axios.get('https://icanhazdadjoke.com/', {headers:{Accept:'text/plain'}})
                  console.log(res.data)
-                 npm test
+                 
