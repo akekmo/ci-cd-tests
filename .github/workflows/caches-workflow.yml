@@ -15,7 +15,7 @@ jobs:
                 path: ~/.npm
                 key: "npm-cache"
             - name: print cache details
-              run: echo '${{toJson(steps.add-cache.outputs)}}''
+              run: echo '${{  toJson(steps.add-cache.outputs)  }}'
             - name: install npm packages
               run: npm install
             - name: use axios
