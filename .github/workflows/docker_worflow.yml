@@ -5,6 +5,8 @@ jobs:
         runs-on: ubuntu-latest
         container:
             image: node:21-alpine3.18
+        env:
+            tesWord : "testword"
         steps:
             - name: Print Node version
               run: |
@@ -22,3 +24,5 @@ jobs:
               with:
                 entrypoint: /usr/local/bin/node
                 args:  -v
+            - name: Log env
+              run: echo $testWord
