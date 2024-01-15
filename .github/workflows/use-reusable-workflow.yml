@@ -11,7 +11,7 @@ jobs:
             name: "Muhammad"
         name: call reusable workflow
     use_reusable_workflow:
-        runs-on: ${{needs.call_reusable_workflow.outputs.os}}
+        runs-on: ubuntu-latest
         steps:
         - name: echo details from reusable workflow
           run: |
