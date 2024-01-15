@@ -34,7 +34,7 @@ jobs:
                 entrypoint: ./scripts/node_script.sh
                 args:  "some string"
             - name: use my personal docker image
-              uses: docker://muhammadolammi/hellodocker@1.0.1
+              uses: docker://muhammadolammi/hellodocker:1.0.1
 
             # - name: send slack message
             #   uses: docker://technosophos/slack-notify
