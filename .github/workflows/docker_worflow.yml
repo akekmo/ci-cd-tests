@@ -9,4 +9,4 @@ jobs:
             - name: Print Node version
               run: |
                node -v
-               cat etc/os-release
+               ls -a
