@@ -6,7 +6,7 @@ jobs:
         container:
             image: node:21-alpine3.18
         env:
-            tesWord : "testword"
+            test_Word : "testword"
         steps:
             - name: Print Node version
               run: |
@@ -25,4 +25,4 @@ jobs:
                 entrypoint: /usr/local/bin/node
                 args:  -v
             - name: Log env
-              run: echo $testWord
+              run: echo $test_Word
