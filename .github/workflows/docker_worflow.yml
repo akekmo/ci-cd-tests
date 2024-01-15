@@ -9,5 +9,5 @@ jobs:
             - name: Print Node version
               run: |
                node -v
-               type node
-               ls -a
+               cat /usr/local/bin/node
+               ls -la
