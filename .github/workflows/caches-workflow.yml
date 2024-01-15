@@ -8,6 +8,11 @@ jobs:
         steps: 
             - name: checkout codes
               uses: actions/checkout@v4
+            - name : add cache
+              uses: actions/cache@v3
+              with:
+                path: ~.npm
+                key: "npm-cache"
             - name: install npm packages
               run: npm install
             - name: use axios
