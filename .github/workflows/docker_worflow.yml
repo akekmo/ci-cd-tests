@@ -10,3 +10,11 @@ jobs:
               run: |
                node -v
                ls -la
+            - name: docker step
+              id: docker-step
+              uses: docker://node:20-alpine3.18
+              with:
+                entrypoint: /usr/local/bin/node
+                args: |
+                 -v
+                 -p 2+3
