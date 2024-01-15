@@ -1,3 +1,4 @@
 #!/bin/sh
 
-node "$@"
+echo "$@"
+node -v
