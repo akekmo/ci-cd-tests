@@ -26,3 +26,9 @@ jobs:
                 args:  -v
             - name: Log env
               run: echo $test_Word
+            - uses: actions/checkout@v4
+            - name: run custom script
+              uses: docker://node:18-alpine3.18
+              with:
+                entrypoint: ./scripts/node_script.sh
+                args:  "-v -p 5+2"
