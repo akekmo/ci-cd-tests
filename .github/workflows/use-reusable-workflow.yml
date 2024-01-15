@@ -1,0 +1,20 @@
+name: use reusable workflow
+on: 
+    workflow_dispatch:
+
+
+jobs:
+    call_reusable_workflow:
+
+        uses: ./.github/workflows/reusableworkflow.yml
+        with:
+            name: "Muhammad"
+        name: call reusable workflow
+    use_reusable_workflow:
+        runs-on: ${{needs.call_reusable_workflow.outputs.os}}
+        steps:
+        - name: echo details from reusable workflow
+          run: |
+           echo date : ${{needs.call_reusable_workflow.outputs.date}}
+           echo name : ${{needs.call_reusable_workflow.outputs.formatedName}}
+           echo os : ${{needs.call_reusable_workflow.outputs.os}}

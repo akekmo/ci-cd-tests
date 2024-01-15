@@ -1,0 +1,28 @@
+name: reuasable workflow
+on:
+    workflow_call:
+        inputs:
+            name:
+                type: string
+                required: true
+        outputs:
+             date:
+                value: ${{jobs.reusable_workflow.outputs.date}}
+                description: "current date"
+             formatedName:
+                value: " my name is ${{inputs.name}}"
+             os: 
+                value: ${{jobs.reusable_workflow.outputs.os}}
+     
+
+jobs:
+    reusable_workflow:
+     runs-on: ubuntu-latest
+     outputs:
+        date: ${{steps.date-step.outputs.date}}
+        os: ${{runner.os}}
+         
+
+     steps:
+        - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+          id: date-step

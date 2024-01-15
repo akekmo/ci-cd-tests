@@ -1,0 +1,25 @@
+{
+  "name": "ci-cd-tests",
+  "version": "1.0.0",
+  "description": "ci cd learning",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "muhammad",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akekmo/ci-cd-tests.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akekmo/ci-cd-tests/issues"
+  },
+  "homepage": "https://github.com/akekmo/ci-cd-tests#readme",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
+  }
+}
