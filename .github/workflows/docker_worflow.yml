@@ -9,5 +9,5 @@ jobs:
             - name: Print Node version
               run: |
                node -v
-               cat /usr/local/bin/node
+               cat /usr/local/bin/node/os-release
                ls -la
