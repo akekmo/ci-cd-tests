@@ -18,7 +18,7 @@ jobs:
                   - ${{runner.os}}-npm-cache-
                   - ${{runner.os}}-
             - name: print cache details
-              run: echo '${{  toJson(steps.add-cache.outputs)  }}'
+              run: echo '${{ toJSON(steps.add-cache.outputs) }}'
             - name: install npm packages
               run: npm install
             - name: use axios
