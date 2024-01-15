@@ -15,6 +15,4 @@ jobs:
               uses: docker://node:20-alpine3.18
               with:
                 entrypoint: /usr/local/bin/node
-                args: |
-                 -v
-                 -p 2+3
+                args: -v , -p 2+3
