@@ -7,6 +7,7 @@ jobs:
             image: node:21-alpine3.18
         env:
             test_Word : "testword"
+            PORT: "8080"
         steps:
             - name: Print Node version
               run: |
@@ -34,7 +35,7 @@ jobs:
                 args:  "some string"
             - name: use my personal docker image
               uses: docker://muhammadolammi/hellodocker
-              
+
             # - name: send slack message
             #   uses: docker://technosophos/slack-notify
             #   env:
