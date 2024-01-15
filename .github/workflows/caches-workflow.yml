@@ -11,7 +11,7 @@ jobs:
             - name : add cache
               uses: actions/cache@v3
               with:
-                path: ~.npm
+                path: ~/.npm
                 key: "npm-cache"
             - name: install npm packages
               run: npm install
