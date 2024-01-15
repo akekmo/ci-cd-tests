@@ -21,6 +21,8 @@ jobs:
               run: echo "${{ toJSON(steps.add-cache.outputs) }}"
             - name: install npm packages
               run: npm install
+            - name: Run tests
+              run: npm test
             - name: use axios
               uses: actions/github-script@v7
               with :
