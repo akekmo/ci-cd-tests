@@ -14,6 +14,9 @@ jobs:
               with:
                 path: ~/.npm
                 key: ${{runner.os}}-npm-cache-${{hashFiles('**/package-lock.json')}}
+                restore-keys: |
+                  - ${{runner.os}}-npm-cache-
+                  - ${{runner.os}}-
             - name: print cache details
               run: echo '${{  toJson(steps.add-cache.outputs)  }}'
             - name: install npm packages
