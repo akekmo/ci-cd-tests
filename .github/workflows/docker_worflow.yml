@@ -31,4 +31,15 @@ jobs:
               uses: docker://node:18-alpine3.18
               with:
                 entrypoint: ./scripts/node_script.sh
-                args:  "-v -p 5+2"
+                args:  "some string"
+            - name: use my personal docker image
+              uses: docker://muhammadolammi/hellodocker
+              
+            # - name: send slack message
+            #   uses: docker://technosophos/slack-notify
+            #   env:
+            #     SLACK_WEBHOOK: https://hooks.slack.com/services/Txxxxxx/Bxxxxxx/xxxxxxxx
+            #     SLACK_TITLE:  From Github Actions
+            #     SLACK_MESSAGE: "Actor: ${{github.actor}} Event: ${{github.event_name}}"
+            #     SLACK_COLOR: "#723fc4"
+               
